@@ -1,0 +1,24 @@
+{
+  "name": "puhelinluettelo-backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build:ui": "rm -rf build && cd ../fs-2020/osa2/puhelinluettelo/ && npm run build --prod && cp -r build ../../../fs-2020-osa3/",
+    "deploy": "git push heroku master",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "logs:prod": "heroku logs --tail"
+  },
+  "author": "Jere Mustonen",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
